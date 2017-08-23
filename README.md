@@ -11,7 +11,7 @@ Via npm:
 npm install vue
 ```
 
-Or nower:
+Or bower:
 
 ```
 bower install vue
@@ -32,6 +32,35 @@ var app = new Vue({
 })
 ```
 
+### Directives
+
+*{{ some_var }}*
+
+Mustache bars, displays the value of enclosed variable.
+
+*v-bind*
+
+Bind, ties a variable to some html element.
+
+*v-if*
+
+Tests a truth value.
+
+*v-for*
+
+*v-on*
+
+*v-model*
+
+
 ### Element (el)
 
 ### Data (data)
+
+### Methods (methods)
+
+### Components
+
+### Templates
+
+### Props

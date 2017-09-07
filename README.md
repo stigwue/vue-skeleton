@@ -27,6 +27,8 @@ Mustache bars, displays the value of enclosed data variable.
 <span>{{ some_var }}</span>
 ```
 
+Note that mustache bars in the context of a *v-once* directive will not change as its variable changes.
+
 ### v-bind
 
 Bind, ties a defined data variable to some html element.
@@ -34,6 +36,8 @@ Bind, ties a defined data variable to some html element.
 ```html
 <span v-bind:title="some_var"></span>
 ```
+
+Notice that binds go where mustache bars cannot (e.g HTML attributes).
 
 ### v-if
 
@@ -69,6 +73,14 @@ Two way binding especially form elements to data.
 <input v-model="some_var" />
 ```
 
+### v-html
+
+Replace content with raw html. Potentially dangerous.
+
+```html
+<div v-html="some_html_content"></div>
+```
+
 ## Application
 
 A vue application is made up of the following parts. Usually, they are provided as an object with specific identifying keys/properties. 
@@ -86,16 +98,16 @@ var app = new Vue({
 })
 ```
 
-### Component
+### Components
 
 Well, a component is another Vue instance (a child one, if you will, with predefined parts/options. Among their important properties are props and template through which we specify arguments and html to output.
 
 ```javascript
-Vue.component('component-name', {
+Vue.component('cur-user', {
 	//props: arguments to be specified
-	props: ['var1', 'var2'],
+	props: ['first', 'last'],
 	//html to output
-  	template: '<span>Firstname Surname</span>'
+  	template: '<span>{{ first }} {{ last }}</span>'
 })
 ```
 
@@ -103,9 +115,11 @@ This then shows up in html as:
 
 ```html
 <span title="Current User">
-	<component-name v-bind:var1="value1" v-bind:var2="value2"></component-name>
+	<cur-user v-bind:first="Stephen" v-bind:last="Igwue"></cur-user>
 </span>
 ```
+
+### Filters
 
 ### Element (el)
 

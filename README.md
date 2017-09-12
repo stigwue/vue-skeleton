@@ -19,6 +19,8 @@ bower install vue
 
 ## Directives
 
+Directives are special attributes with the *v-* prefix. Most are single javascript expressions and they can accept arguments.
+
 ### {{ some_var }}
 
 Mustache bars, displays the value of enclosed data variable.

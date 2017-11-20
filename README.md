@@ -3,19 +3,25 @@
 VueJS skeleton app. Built with lessons gleaned from the [VueJS documentation](https://vuejs.org/v2/guide).
 
 
-## Installation
+## Installation & Usage
 
-Via npm:
+1. First step is to get the vue js file.
 
-```
-npm install vue
-```
+	* Via npm:
+	
+	```
+	npm install vue
+	```
+	
+	* Or bower:
+	
+	```
+	bower install vue
+	```
+	
+	* Or direct download:
 
-Or bower:
-
-```
-bower install vue
-```
+2. Next, add a reference to the vue js file in your project HTML code.
 
 ## Directives
 
@@ -23,13 +29,13 @@ Directives are special attributes with the *v-* prefix. Most are single javascri
 
 ### {{ some_var }}
 
-Mustache bars, displays the value of enclosed data variable.
+Mustache bars, displays the value of enclosed data variable. This is a one-way bind.
 
 ```html
 <span>{{ some_var }}</span>
 ```
 
-Note that mustache bars in the context of a *v-once* directive will not change as its variable changes.
+Mustache bars in the context of a *v-once* directive will not change as its variable changes.
 
 ### v-bind
 
